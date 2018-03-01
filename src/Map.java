@@ -43,4 +43,8 @@ public class Map {
     public int getSteps() {
         return Steps;
     }
+
+    public void print(){
+        System.out.println(getRow() + " " + getColumn() + " " + getVehicles() + " " + getRides() + " " + getBonus() + " " + getSteps());
+    }
 }

@@ -11,8 +11,10 @@ public class Ride {
     private Status Status;
     private int Distance;
     private int TimeWindow;
+    private int weight;
+    private int rideNumber;
 
-    public Ride(int startX, int startY, int endX, int endY, int startTime, int endTime){
+    public Ride(int startX, int startY, int endX, int endY, int startTime, int endTime, int rideNumber){
         this.StartX = startX;
         this.StartY = startY;
         this.EndX = endX;
@@ -22,6 +24,8 @@ public class Ride {
         this.Status = Status.NotStarted;
         this.Distance = Math.abs((endX - startX) + (endY - startY));
         this.TimeWindow = endTime - startTime;
+        this.weight = (startX + startY) + (0 - startTime) + (0 - endTime) + (0-getDistance());
+        this.rideNumber = rideNumber;
 
     }
 
@@ -72,5 +76,19 @@ public class Ride {
 
     public int getTimeWindow() {
         return TimeWindow;
+    }
+
+    public int getWeight() {return weight;}
+
+    public void print(){
+        System.out.println(getStartX() + " " + getStartY() + " " + getEndX() + " " + getEndY() + " " + StartTime + " " + EndTime + " weight: " +  getWeight());
+
+    }
+    public void setWeight(int weight){
+
+    }
+
+    public int getCalculateWeight(int currentX, int currentY, int currentTime){
+        return (Math.abs((getStartX() - currentX) + (getStartY() - currentY))) + (currentTime - getStartTime()) + (currentTime - getEndTime()) + (0-getDistance());
     }
 }
