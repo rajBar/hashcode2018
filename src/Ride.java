@@ -2,24 +2,24 @@
  * Created by Gulraj on 01/03/2018.
  */
 public class Ride {
-    public int StartX;
-    public int StartY;
-    public int EndX;
-    public int EndY;
-    public int StartTime;
-    public int EndTime;
-    public Status Status;
-    public int Distance;
-    public int TimeWindow;
+    private int StartX;
+    private int StartY;
+    private int EndX;
+    private int EndY;
+    private int StartTime;
+    private int EndTime;
+    private Status Status;
+    private int Distance;
+    private int TimeWindow;
 
     public Ride(int startX, int startY, int endX, int endY, int startTime, int endTime){
-        this.startX = startX;
-        this.startY = startY;
-        this.endX = endX;
-        this.endY = endY;
-        this.startTime = startTime;
-        this.endTime = endTime;
-        this.status = Status.NotStarted;
+        this.StartX = startX;
+        this.StartY = startY;
+        this.EndX = endX;
+        this.EndY = endY;
+        this.StartTime = startTime;
+        this.EndTime = endTime;
+        this.Status = Status.NotStarted;
         this.Distance = Math.abs((endX - startX) + (endY - startY));
         this.TimeWindow = endTime - startTime;
 
