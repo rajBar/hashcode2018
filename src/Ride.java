@@ -12,6 +12,19 @@ public class Ride {
     public int Distance;
     public int TimeWindow;
 
+    public Ride(int startX, int startY, int endX, int endY, int startTime, int endTime){
+        this.startX = startX;
+        this.startY = startY;
+        this.endX = endX;
+        this.endY = endY;
+        this.startTime = startTime;
+        this.endTime = endTime;
+        this.status = Status.NotStarted;
+        this.Distance = Math.abs((endX - startX) + (endY - startY));
+        this.TimeWindow = endTime - startTime;
+
+    }
+
     public void setStatus(Status status) {
         Status = status;
     }
