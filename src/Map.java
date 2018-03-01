@@ -33,16 +33,4 @@ public class Map {
     public int getSteps() {
         return Steps;
     }
-
-    public Stage getStage() {
-        return Stage;
-    }
-
-    public int getTimeWindow() {
-        return TimeWindow;
-    }
-
-    public int getDistance() {
-        return Distance;
-    }
 }
